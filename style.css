@@ -108,7 +108,7 @@ nav a.active::after {
     gap: 5px;
     cursor: pointer;
     padding: 5px;
-    z-index: 1001;
+    z-index: 9999;
 }
 
 .hamburger span {
