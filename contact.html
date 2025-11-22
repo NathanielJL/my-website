@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nathaniel Lee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <div class="brand-img">
+                <div class="circle">
+                </div>
+            </div>
+            <a href="index.html" class="logo">Nathaniel Lee</a>
+            <p class="tagline">Student @ BostonU</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Me</h1>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nathaniel-lee-924657282/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/NathanielJL" target="_blank">GitHub</a>
+            <a href="https://www.instagram.com/nat.martelli/" target="_blank">Instagram</a>
+        </div>
+
+        <form action="https://formspree.io/f/manaepzo" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
