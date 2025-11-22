@@ -587,7 +587,7 @@ section.experience {
     }
     .hamburger {
         display: flex;
-    }
+        order: -1;
     }
     nav {
         position: fixed;
