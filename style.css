@@ -361,7 +361,7 @@ section.projects {
 
 .projects h1 {
     font-size: 48px;
-    text-align: left;
+    text-align: center;
     color: #d4825c;
     margin-bottom: 0px;
 }
@@ -411,6 +411,93 @@ section.projects {
     color: #666;
     font-style: italic;
     line-height: 1.4;
+}
+
+.project-content a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* ========== CATEGORY NAVIGATION ========== */
+.category-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 15px 0 40px 0;
+    padding: 20px 0;
+    border-top: 5px solid #e8b89a;
+    border-bottom: 5px solid #e8b89a;
+}
+
+.category-arrow {
+    background-color: #d4825c;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.category-arrow:hover {
+    background-color: #c66e44;
+    transform: scale(1.1);
+}
+
+.category-arrow:active {
+    transform: scale(0.95);
+}
+
+.category-display {
+    min-width: 250px;
+    text-align: center;
+}
+
+.category-label {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d4825c;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* ========== FADE ANIMATIONS ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.project-item.fade-in {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.project-item.fade-out {
+    animation: fadeOut 0.3s ease forwards;
 }
 
 /* ========== CONTACT PAGE ========== */
