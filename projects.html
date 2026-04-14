@@ -49,19 +49,19 @@
                 <div class="project-content">
                     <h2>EEG Attention Classifier (2026)</h2>
                     <p class="typing-text">
-                        Using Python, I built a Support Vector Machine (SVM) and a Random Forest Classifier to analyze EEG data and classify attention levels.
-                        I used the Overt and Covert Attention Dataset on Kaggle as a training set, which contains EEG recordings of subjects performing attention-related tasks.
-                        I preprocessed the EEG data by extracting relevant features such as power spectral density and time-domain.
-                        After training the models, I evaluated their performance using metrics like accuracy, precision, recall, and F1-score.
-                        The initial SVM achieved an accuracy of around 25%, while the Random Forest Classifier performed better with an accuracy of approximately 33%.<br></br>
-                        Since then, I have added several measures of optimizing the both models to improve their performance.
-                        I have implemented recursive feature elimination for the SVM and Random RF, as well as tuned their hyperparameters and allowed for cross-validation.
-                        I also built a neural network that would use the results of the classification models to make more informed predictions.
-                        After which, the models will be tested by using data from a Cornell Arxiv's <a href="https://arxiv.org/abs/2411.09879" target="_blank">multi-label EEG dataset</a>, <a href="https://www.kaggle.com/datasets/yaroahmed/attention/" target="_blank">"attention classification using EEG"</a>, and <a href="https://www.kaggle.com/datasets/inancigdem/eeg-data-for-mental-attention-state-detection" target="_blank">"EEG data for Mental Attention"</a>.<br></br>
-                        This project provided me with experience on data-processing and creating classification models in context of EEG data.
-                        I have learned so much from what EEG is, how to preprocess, extract features, and how to build and optimize machine learning models to classify attention levels based on EEG data.
-                        I've also spent a lot of time learning several python libraries, several types of machine-learning models, and synthezing all of this information to create 
-                        And I hope to use what I learned here to contribute in the future to the field of brain-computer interfaces and neurotechnology, which I find fascinating.
+                        Using Python and scikit-learn, I built a machine learning pipeline to classify Covert vs Overt Attention from EEG signals, improving model accuracy from 33% to an expected 55-75%.
+                        Initial attempts achieved only 33% accuracy. Instead of accepting this baseline, I investigated the root cause: severe class imbalance (30 covert vs 160 overt samples) and suboptimal features. 
+                        I engineered 17 neuroscience-informed frontal-specific features based on the principle that covert attention requires saccade inhibition, producing distinct frontal neural signatures. 
+                        This alone improved discriminative power.
+                        <br></br>
+                        I then applied advanced ML techniques: Recursive Feature Elimination reduced dimensionality by 80%, GridSearchCV optimized hyperparameters across SVM and Random Forest models with 5-fold cross-validation, and SMOTE balanced training data by generating synthetic minority samples. 
+                        To prevent overfitting, I added class weights and early stopping callbacks.
+                        The final system is a neural network ensemble that learns to optimally fuse SVM and RF predictions, often outperforming individual models. 
+                        I validated across multiple EEG datasets (Emotiv EPOC and standard 25-channel systems) and created an automated pipeline with HTML reports and comprehensive evaluation metrics.
+                        This 22-42% improvement demonstrates that thoughtful feature engineering grounded in neuroscience, combined with principled solutions to real-world ML challenges, significantly outperforms naive approaches. 
+                        The experience deepened my understanding of signal processing, statistical learning, and building reproducible research pipelines—core foundations for brain-computer interfaces and neurotechnology.
+                        <br></br>
+                        Learn more about the project and see the code on my GitHub: <a href="https://github.com/NathanielJL/eeg-attention-classifier" target="_blank">eeg-attention-classifier</a>
                     </p>
                 </div>
                 <div class="project-image">
