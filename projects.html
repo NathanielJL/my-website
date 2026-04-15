@@ -49,7 +49,7 @@
                 <div class="project-content">
                     <h2>EEG Attention Classifier (2026)</h2>
                     <p class="typing-text">
-                        Using Python and scikit-learn, I built a machine learning pipeline to classify Covert vs Overt Attention from EEG signals, improving model accuracy from 33% to an expected 55-75%.
+                        Using Python and scikit-learn, I built a machine learning pipeline to classify Covert vs Overt Attention from EEG signals, improving model accuracy from 33% to an expected 81-84%
                         Initial attempts achieved only 33% accuracy. Instead of accepting this baseline, I investigated the root cause: severe class imbalance (30 covert vs 160 overt samples) and suboptimal features. 
                         I engineered 17 neuroscience-informed frontal-specific features based on the principle that covert attention requires saccade inhibition, producing distinct frontal neural signatures. 
                         This alone improved discriminative power.
@@ -58,7 +58,7 @@
                         To prevent overfitting, I added class weights and early stopping callbacks.
                         The final system is a neural network ensemble that learns to optimally fuse SVM and RF predictions, often outperforming individual models. 
                         I validated across multiple EEG datasets (Emotiv EPOC and standard 25-channel systems) and created an automated pipeline with comprehensive evaluation metrics.
-                        This 22-42% improvement demonstrates that thoughtful feature engineering grounded in neuroscience, combined with principled solutions to real-world ML challenges, significantly outperforms naive approaches. 
+                        This improvement demonstrates that thoughtful feature engineering grounded in neuroscience, combined with principled solutions to real-world ML challenges, significantly outperforms naive approaches. 
                         The experience deepened my understanding of signal processing, statistical learning, and building reproducible research pipelines—core foundations for brain-computer interfaces and neurotechnology.
                         <br></br>
                         Learn more about the project and see the code on my GitHub: <a href="https://github.com/NathanielJL/eeg-attention-classifier" target="_blank">eeg-attention-classifier</a>
