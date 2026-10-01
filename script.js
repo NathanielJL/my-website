@@ -16,11 +16,9 @@ if (hamburger && nav) {
 
 // ========== PROJECT CATEGORY NAVIGATION ==========
 
-const categories = ['personal', 'machine-learning'];
-const categoryNames = {
-    'personal': 'Personal Projects',
-    'machine-learning': 'Machine-Learning Projects'
-};
+const categories = Array.from(new Set(
+    Array.from(document.querySelectorAll('.project-item'), item => item.dataset.category)
+));
 let currentCategoryIndex = 0;
 
 const prevButton = document.getElementById('prevCategory');
@@ -34,7 +32,7 @@ function showCategory(categoryIndex) {
     const currentCategory = categories[categoryIndex];
     
     // Update label
-    categoryLabel.textContent = categoryNames[currentCategory];
+    categoryLabel.textContent = currentCategory;
     
     // Show/hide projects with fade effect
     projectItems.forEach(item => {
