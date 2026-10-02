@@ -37,11 +37,11 @@
         </div>
 
         <div class="category-navigation">
-            <button class="category-arrow prev-arrow" id="prevCategory" aria-label="Previous category">‹</button>
+            <button class="category-arrow prev-arrow" id="prevCategory" aria-label="Previous category" type="button"></button>
             <div class="category-display">
-                <span class="category-label" id="categoryLabel">EEG Attention Classifier
+                <span class="category-label" id="categoryLabel">EEG Attention Classifier</span>
             </div>
-            <button class="category-arrow next-arrow" id="nextCategory" aria-label="Next category">›</button>
+            <button class="category-arrow next-arrow" id="nextCategory" aria-label="Next category" type="button"></button>
         </div>
 
         <div class="projects-container" id="projectsContainer">
@@ -65,10 +65,12 @@
                     </p>
                 </div>
                 <div class="project-image">
-                    <img src="" alt=""/> 
-                    <p class="caption"><strong>Full Project Walkthrough:</strong> 
-                    
-                    </p>
+                    <div class="results-gallery">
+                        <img src="images/rf_covert_vs_overt.png" alt="Random forest covert versus overt attention results" />
+                        <img src="images/svm_covert_vs_overt.png" alt="Support vector machine covert versus overt attention results" />
+                        <img src="images/nn_ensemble_analysis.png" alt="Neural network ensemble analysis results" />
+                    </div>
+                    <p class="caption"><strong>Results:</strong> Random forest, SVM, and neural-network ensemble performance for covert vs overt attention classification.</p>
                 </div>
             </div>
 
@@ -121,6 +123,16 @@
             </div>
 
     </section>
+
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+        <div class="image-modal-backdrop" data-close-modal></div>
+        <div class="image-modal-content">
+            <button class="image-modal-close" id="imageModalClose" aria-label="Close enlarged image" type="button"></button>
+            <img id="modalImage" src="" alt="" />
+            <p id="modalCaption"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

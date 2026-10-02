@@ -33,7 +33,7 @@
     <section class="home">
         <div class="home-img">
             <div class="circle">
-                <img src="" alt="" />
+                <img src="images/IMG_8447.jpeg" alt="Nathaniel Lee portrait" />
             </div>
         </div>
         <div class="home-content">
@@ -42,11 +42,142 @@
             <p>Driven to understand how things work — and to create things that work better, 
                 I explore ideas at the intersection of engineering, neuroscience, and philosophy.</p>
             <div class="social-icons">
-                <a href="https://drive.google.com/file/d/1RbjvtXjbClqAISz26BlBnq69IZ1gfD95/view?usp=sharing" aria-label="Resume">CV</a>
+                <button class="cv-button" type="button" aria-label="Open CV">CV</button>
                 <a href="contact.html" aria-label="Contact">Cntc</a>
             </div>
         </div>
     </section>
+
+    <div class="resume-modal" id="resumeModal" aria-hidden="true">
+        <div class="resume-modal-backdrop" data-close-resume></div>
+        <div class="resume-modal-content">
+            <button class="resume-modal-close" id="resumeModalClose" aria-label="Close CV" type="button"></button>
+            <div class="resume-preview">
+                <div class="resume-header">
+                    <h2>Nathaniel Lee</h2>
+                    <p>Boston, MA | +1 (718)-433-8830 | <a href="mailto:Nathaniel.MarteLee@gmail.com">Nathaniel.MarteLee@gmail.com</a> | <a href="https://nathanieljl.github.io/my-website/" target="_blank" rel="noreferrer">Website</a> | <a href="https://github.com/NathanielJL" target="_blank" rel="noreferrer">GitHub</a></p>
+                </div>
+
+                <div class="resume-section">
+                    <h3>EDUCATION</h3>
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>Boston University</strong>
+                            <span>May 2029</span>
+                        </div>
+                        <p class="resume-subtitle">Bachelor of Science in Electrical Engineering</p>
+                        <p>Honors and Awards: Dean’s List (Spring 2026, Summer 2026)</p>
+                        <p>GPA: 3.6/4.0</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>RESEARCH</h3>
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>Caldwell-Harris Psycholinguistics Lab</strong>
+                            <span>September 2026 – Present</span>
+                        </div>
+                        <p class="resume-subtitle">Research Assistant | Department of Psychology &amp; Brain Sciences</p>
+                        <ul>
+                            <li>Worked with a postbaccalaureate researcher and two undergraduate psychology majors, under faculty supervision, to design an eye-tracking study that applies the attentional drift diffusion model to moral decision-making.</li>
+                            <li>Built a modular MATLAB pipeline for aDDM analysis: turning raw gaze samples into fixations, organizing trial- and participant-level data, and fitting the model by maximum likelihood with model comparison on held-out trials.</li>
+                            <li>Reviewed and synthesized research on computational models of value-based and moral choice. I presented the findings to the research team to identify testable differences between dual-process and single-process accounts.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>PROJECTS</h3>
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>EEG Attention Classifier</strong>
+                            <span>January 2026 – April 2026</span>
+                        </div>
+                        <p class="resume-subtitle">Self-Learning Project</p>
+                        <ul>
+                            <li>Built an end-to-end EEG ML pipeline (filtering, ICA artifact removal, feature extraction, model training) to classify covert vs. overt attention.</li>
+                            <li>Engineered a 161-feature dataset and applied RFE, SMOTE, and hyperparameter tuning, achieving 81–84% classification accuracy on the current dataset.</li>
+                            <li>Automated preprocessing and training workflows and evaluated SVM, Random Forest, and neural-network models across multiple EEG datasets.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>ECG Data Analysis Pipeline</strong>
+                            <span>April 2026</span>
+                        </div>
+                        <p class="resume-subtitle">EK125 Group Project</p>
+                        <ul>
+                            <li>Tuned findpeaks() parameters in MATLAB (MinPeakHeight, MinPeakDistance) to isolate R-peaks from T and P waves, enabling accurate heartbeat detection across rest, exercise, and box breathing conditions.</li>
+                            <li>Generated overlay visualizations aligning all detected heartbeats at their R-peak with semi-transparent rendering, revealing regularity differences across physiological conditions.</li>
+                            <li>Produced comparative ECG signal plots and heartbeat overlay figures with consistent formatting (axis limits, line weights, font sizes) across all three experimental conditions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>The NeuroLetter</strong>
+                            <span>May 2026</span>
+                        </div>
+                        <p class="resume-subtitle">Personal Project - <a href="https://nathanieljl.github.io/neuroletter/" target="_blank" rel="noreferrer">nathanieljl.github.io/neuroletter</a></p>
+                        <ul>
+                            <li>Developed an aggregation pipeline pulling 600+ weekly papers from 7 academic sources (arXiv, PubMed, bioRxiv) with deduplication and normalization across a standardized schema.</li>
+                            <li>Implemented a keyword-weighted relevance scoring system using TF-IDF and MeSH term matching with citation-count boosting to classify papers into 9–10 neuroscience research categories.</li>
+                            <li>Deployed end-to-end weekly delivery via GitHub Actions, generating HTML digests and Brevo email notifications on free-tier infrastructure at $0/month operating cost.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>Rock Paper Scissor Tournament Game</strong>
+                            <span>March 2026</span>
+                        </div>
+                        <p class="resume-subtitle">EK125 Group Project</p>
+                        <ul>
+                            <li>Designed and implemented four distinct AI opponents, each using different strategic heuristics and behavioral patterns.</li>
+                            <li>Integrated a reinforcement-learning (Q-learning) agent that adapted to player history and predicted future moves in real time; players achieved only 18–32% win rates against the model.</li>
+                            <li>Collaborated with teammates to align model logic, game mechanics, and backend systems for a seamless gameplay experience.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>ACTIVITIES &amp; LEADERSHIP</h3>
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>The AI Society</strong>
+                            <span>January 2026 – Present</span>
+                        </div>
+                        <p class="resume-subtitle">Tech Team Member</p>
+                        <ul>
+                            <li>Managed Instagram outreach and designed promotional assets to increase engagement and visibility for workshops and technical visibility.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-row">
+                            <strong>Society of Asian Scientists and Engineers</strong>
+                            <span>January 2026 – Present</span>
+                        </div>
+                        <p class="resume-subtitle">Member</p>
+                        <ul>
+                            <li>Performed mammalian cell culture techniques including cell passaging, centrifugation, and subculturing for proliferation in a wet lab setting.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>SKILLS</h3>
+                    <div class="resume-entry skill-block">
+                        <p><strong>Technical Skills:</strong> Python (NumPy, Pandas, Scikit-learn, SciPy, TensorFlow, Keras, MNE, Matplotlib), MATLAB, HTML, CSS, GitHub</p>
+                        <p><strong>Other Skills:</strong> Excel, Graphic Design (Canva, Photoshop, Lightroom)</p>
+                        <p><strong>Soft Skills:</strong> Writing (Academic, Creative, Persuasive), Presentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>© 2025 Nathaniel Lee</p>
